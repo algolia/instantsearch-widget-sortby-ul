@@ -7,16 +7,14 @@ import type { SortByRendererCreator } from './types';
  *  - the `dispose` function used to clean the changes made by the widget
  * It can also be used to keep references of objects that must be reused between renders
  */
-export const createSortByRenderer: SortByRendererCreator = ({
-  container,
-}) => {
-
+export const createSortByRenderer: SortByRendererCreator = ({ container }) => {
   const containerNode: Element =
     typeof container === 'string'
       ? document.querySelector(container)!
       : container;
 
   const root = document.createElement('div');
+  root.className = 'ais-Menu ais-CustomSortBy';
 
   return {
     /*
@@ -37,11 +35,42 @@ export const createSortByRenderer: SortByRendererCreator = ({
          * This is when we will create everything that must be reused between renders (containers, event listeners, etc.)
          */
         containerNode.appendChild(root);
+
+        root.addEventListener('click', (event) => {
+          const element = event?.target as Element;
+          if (element.matches('.ais-Menu-label')) {
+            const nextIndex = element.getAttribute('data-value');
+            renderOptions.refine(nextIndex!);
+          }
+        });
       }
 
       /*
        * Rendering
        */
+      root.innerHTML = `
+        <ul class="ais-Menu-list">
+          ${renderOptions.options
+            .map(
+              (option) => `
+            <li
+              class="ais-Menu-item ${
+                option.value === renderOptions.currentRefinement
+                  ? 'ais-Menu-item--selected'
+                  : ''
+              }"
+            >
+              <a href="#" class="ais-Menu-link">
+                <span class="ais-Menu-label" data-value=${option.value}>
+                  ${option.label}
+                </span>
+              </a>
+            </li>
+          `
+            )
+            .join('')}
+        </ul>
+      `;
     },
     /*
      * The dispose function passed to the connector

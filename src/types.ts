@@ -1,12 +1,46 @@
 import type { Renderer, Connector, WidgetFactory } from 'instantsearch.js';
 
+type SortByIndexDefinition = {
+  /**
+   * The name of the index to target.
+   */
+  value: string;
+  /**
+   * The label of the index to display.
+   */
+  label: string;
+};
+
+type SortByItem = {
+  /**
+   * The name of the index to target.
+   */
+  value: string;
+  /**
+   * The label of the index to display.
+   */
+  label: string;
+};
+
+type TransformItems<TItem> = (items: TItem[]) => TItem[];
+
 /*
  * Parameters send only to the widget creator function
  * These parameters will be used by the widget creator to create the widget renderer and factory
  */
 export type SortByWidgetParams = {
-  container: Element | string;
-  // TODO: add the widget params
+  /**
+   * CSS Selector or HTMLElement to insert the widget.
+   */
+  container: string | HTMLElement;
+  /**
+   * Array of objects defining the different indices to choose from.
+   */
+  items: SortByIndexDefinition[];
+  /**
+   * Function to transform the items passed to the templates.
+   */
+  transformItems?: TransformItems<SortByItem>;
 };
 
 /*
@@ -14,25 +48,49 @@ export type SortByWidgetParams = {
  * These parameters will be used by the widget creator to manage the widget logic
  */
 export type SortByConnectorParams = {
-  // TODO: add the widget params
+  /**
+   * Array of objects defining the different indices to choose from.
+   */
+  items: SortByItem[];
+  /**
+   * Function to transform the items passed to the templates.
+   */
+  transformItems?: TransformItems<SortByItem>;
 };
 
 export type SortByRenderState = {
-  // TODO: add the render state params
+  /**
+   * The initially selected index.
+   */
+  initialIndex?: string;
+  /**
+   * The currently selected index.
+   */
+  currentRefinement: string;
+  /**
+   * All the available indices
+   */
+  options: SortByItem[];
+  /**
+   * Switches indices and triggers a new search.
+   */
+  refine: (value: string) => void;
+  /**
+   * `true` if the last search contains no result.
+   */
+  hasNoResults: boolean;
 };
 
 type SortByWidgetDescription = {
-  $$type: 'eunjae-lee.sort-by';
+  $$type: 'ais.sortBy';
   renderState: SortByRenderState;
   indexRenderState: {
-    sortBy: {
-      // TODO: add the return type of getRenderState
+    sortBy: SortByRenderState & {
+      widgetParams: SortByConnectorParams;
     };
   };
   indexUiState: {
-    sortBy: {
-      // TODO: add the return type of getWidgetUiState
-    }
+    sortBy: string;
   };
 };
 

@@ -1,4 +1,5 @@
-import { connectSortBy } from './connector';
+import { connectSortBy } from 'instantsearch.js/es/connectors';
+
 import { createSortByRenderer } from './renderer';
 import type {
   SortByWidgetCreator,
@@ -10,22 +11,19 @@ import type {
  * Widget creator
  * Returns a widget instance
  */
-export const sortBy: SortByWidgetCreator = function SortBy(
-  widgetParams
-) {
+export const sortBy: SortByWidgetCreator = function SortBy(widgetParams) {
   const rendererWidgetParams: SortByWidgetParams = {
     container: widgetParams.container,
-    // TODO: pick the widget-only parameters from the widgetParams
+    items: widgetParams.items,
   };
 
-  const { render, dispose } = createSortByRenderer(
-    rendererWidgetParams
-  );
+  const { render, dispose } = createSortByRenderer(rendererWidgetParams);
 
   const createWidget = connectSortBy(render, dispose);
 
   const connectorParams: SortByConnectorParams = {
-    // TODO: pick the connector-only parameters from the widgetParams
+    items: widgetParams.items,
+    transformItems: widgetParams.transformItems,
   };
 
   return {
