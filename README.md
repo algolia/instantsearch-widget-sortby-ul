@@ -61,8 +61,6 @@ search.addWidgets([
 search.start();
 ```
 
-
-
 ## Options
 
 ### container
@@ -102,98 +100,3 @@ sortBy({
   // ...
 });
 ```
-
-
-### Connector
-
-### Usage
-
-```js
-import { connectSortBy } from '@eunjae-lee/sort-by';
-
-// 1. Create a render function
-const renderSortBy = (renderOptions, isFirstRender) => {
-  // Rendering logic
-};
-
-// 2. Create the custom widget
-const customSortBy = connectSortBy(
-  renderSortBy
-);
-
-// 3. Instantiate
-search.addWidgets([
-  customSortBy({
-    // instance params
-  }),
-]);
-```
-
-### Options
-
-#### option1
-
-> `...`
-
-REPLACE WITH THE DESCRIPTION FOR THIS RENDERING ITEM
-
-
-```js
-const renderSortBy = (renderOptions, isFirstRender) => {
-  // show how to use this render option
-};
-
-const customSortBy = connectSortBy(
-  renderSortBy,
-);
-
-search.addWidgets([
-  customSortBy({
-    // ...
-  }),
-]);
-```
-
-#### widgetParams
-
-> `object`
-
-All original widget options forwarded to the render function.
-
-```js
-const renderSortBy = (renderOptions, isFirstRender) => {
-  const { widgetParams } = renderOptions;
-  widgetParams.container.innerHTML = '...';
-};
-
-const customSortBy = connectSortBy(
-  renderSortBy,
-);
-
-search.addWidgets([
-  customSortBy({
-    container: document.querySelector('#sort-by'),
-    // ...
-  }),
-]);
-```
-## Compatibility
-
-### Supported browsers
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------- | --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
-
-# Learn more about InstantSearch.js
-InstantSearch.js is a JavaScript library for building performant and instant search experiences with Algolia.
-
-* Learn more about InstantSearch.js - [Getting Started guide](https://www.algolia.com/doc/api-reference/widgets/js/)
-* See the list of [all available widgets](https://www.algolia.com/doc/api-reference/widgets/js/)
-
-
-# Contributors & Licence
-This widget is under [MIT Licence](https://...)
-
-_This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com)._
-
