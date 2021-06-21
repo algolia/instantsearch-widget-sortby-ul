@@ -8,7 +8,7 @@
 
 ---
 
-![npm](https://camo.githubusercontent.com/478b01f525d9865834a01e94aa4cff239b10fde8edce31749ecf38f6306b5033/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742d746f6173743f636f6c6f723d636333353334) ![npm](https://camo.githubusercontent.com/03b422bdbec4f6d673515dde3761d508676449ad5dcde0416fade89343207540/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f72656163742d746f6173743f636f6c6f723d253233343463633130) ![npm](https://camo.githubusercontent.com/03b422bdbec4f6d673515dde3761d508676449ad5dcde0416fade89343207540/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f72656163742d746f6173743f636f6c6f723d253233343463633130)
+[![MIT](https://img.shields.io/npm/l/@eunjae-lee/instantsearch-widget-sortby-ul)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@eunjae-lee/instantsearch-widget-sortby-ul.svg)](https://npmjs.org/package/@eunjae-lee/instantsearch-widget-sortby-ul)
 
 ## Summary
 
