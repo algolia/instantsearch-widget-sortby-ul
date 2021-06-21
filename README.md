@@ -66,8 +66,8 @@ search.start();
 
 | Option | Type | Required | Default | Description |
 | :-- | :-- | :-- | :-- | --- |
-| `container` | `string` or `HTMLElement` | true | - | The element to insert the widget into. |
-| `items` | `object[]` | true | - | The list of indices to search in. |
+| [`container`](#container) | `string` or `HTMLElement` | true | - | The element to insert the widget into. |
+| [`items`](#items) | `object[]` | true | - | The list of indices to search in. |
 
 #### container
 
