@@ -42,6 +42,7 @@ search.addWidgets([
 <article>
   <h1>{{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</h1>
   <p>{{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}</p>
+  <p>\${{price}}</p>
 </article>
 `,
     },
