@@ -39,6 +39,7 @@ export const createSortByRenderer: SortByRendererCreator = ({ container }) => {
         root.addEventListener('click', (event) => {
           const element = event?.target as Element;
           if (element.matches('.ais-Menu-label')) {
+            event.preventDefault();
             const nextIndex = element.getAttribute('data-value');
             renderOptions.refine(nextIndex!);
           }
