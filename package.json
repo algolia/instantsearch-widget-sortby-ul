@@ -1,11 +1,11 @@
 {
-  "name": "@eunjae-lee/js-sort-by",
+  "name": "@eunjae-lee/instantsearch-widget-sortby-ul",
   "version": "1.0.0",
   "description": "InstantSearch widget that makes a sort-by",
   "keywords": [
     "instantsearch-widget",
     "instantsearch",
-    "instantsearch-widget-sort-by",
+    "instantsearch-widget-sortby-ul",
     "widget",
     "connector",
     "algolia"

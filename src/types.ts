@@ -120,7 +120,7 @@ export type SortByRendererCreator = (
  */
 export type SortByWidgetCreator = WidgetFactory<
   SortByWidgetDescription & {
-    $$widgetType: 'eunjae-lee.sort-by';
+    $$widgetType: 'eunjae-lee.sortby-ul';
   },
   SortByConnectorParams,
   SortByWidgetParams

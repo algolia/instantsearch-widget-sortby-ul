@@ -28,6 +28,6 @@ export const sortBy: SortByWidgetCreator = function SortBy(widgetParams) {
 
   return {
     ...createWidget(connectorParams),
-    $$widgetType: 'eunjae-lee.sort-by',
+    $$widgetType: 'eunjae-lee.sortby-ul',
   };
 };

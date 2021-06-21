@@ -29,9 +29,9 @@
 ## Install
 
 ```bash
-npm install @eunjae-lee/sort-by
+npm install @eunjae-lee/instantsearch-widget-sortby-ul
 # or
-yarn add @eunjae-lee/sort-by
+yarn add @eunjae-lee/instantsearch-widget-sortby-ul
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ yarn add @eunjae-lee/sort-by
 ```js
 import instantsearch from 'instantsearch.js';
 import algoliasearch from 'algoliasearch/lite';
-import { sortBy } from '@eunjae-lee/sort-by';
+import { sortBy } from '@eunjae-lee/instantsearch-widget-sortby-ul';
 
 const searchClient = algoliasearch('appId', 'apiKey');
 
