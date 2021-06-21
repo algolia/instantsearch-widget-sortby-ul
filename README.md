@@ -24,7 +24,7 @@
 
 ## Demo
 
-[Demo](https://codesandbox.io/s/github/eunjae-lee/js-sort-by/tree/main/example) on CodeSandbox.
+[Demo](https://codesandbox.io/s/github/eunjae-lee/js-sort-by/tree/main/example?file=/index.ts) on CodeSandbox.
 
 ## Install
 
