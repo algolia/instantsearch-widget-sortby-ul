@@ -24,6 +24,12 @@ type SortByItem = {
 
 type TransformItems<TItem> = (items: TItem[]) => TItem[];
 
+type SortByCssClasses = Partial<{
+  root: string;
+  list: string;
+  item: string;
+}>;
+
 /*
  * Parameters send only to the widget creator function
  * These parameters will be used by the widget creator to create the widget renderer and factory
@@ -41,6 +47,10 @@ export type SortByWidgetParams = {
    * Function to transform the items passed to the templates.
    */
   transformItems?: TransformItems<SortByItem>;
+  /**
+   * Object of class names to the elements.
+   */
+  cssClasses?: SortByCssClasses;
 };
 
 /*

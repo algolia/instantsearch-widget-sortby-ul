@@ -15,6 +15,7 @@ export const sortBy: SortByWidgetCreator = function SortBy(widgetParams) {
   const rendererWidgetParams: SortByWidgetParams = {
     container: widgetParams.container,
     items: widgetParams.items,
+    cssClasses: widgetParams.cssClasses,
   };
 
   const { render, dispose } = createSortByRenderer(rendererWidgetParams);

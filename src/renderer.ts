@@ -7,14 +7,20 @@ import type { SortByRendererCreator } from './types';
  *  - the `dispose` function used to clean the changes made by the widget
  * It can also be used to keep references of objects that must be reused between renders
  */
-export const createSortByRenderer: SortByRendererCreator = ({ container }) => {
+export const createSortByRenderer: SortByRendererCreator = ({
+  container,
+  cssClasses,
+}) => {
+  const cx = (name: keyof Exclude<typeof cssClasses, undefined>) =>
+    cssClasses?.[name] ?? '';
+
   const containerNode: Element =
     typeof container === 'string'
       ? document.querySelector(container)!
       : container;
 
   const root = document.createElement('div');
-  root.className = 'ais-Menu ais-CustomSortBy';
+  root.className = `${cx('root')} ais-Menu`;
 
   return {
     /*
@@ -50,12 +56,12 @@ export const createSortByRenderer: SortByRendererCreator = ({ container }) => {
        * Rendering
        */
       root.innerHTML = `
-        <ul class="ais-Menu-list">
+        <ul class="${cx('list')} ais-Menu-list">
           ${renderOptions.options
             .map(
               (option) => `
             <li
-              class="ais-Menu-item ${
+              class="${cx('item')} ais-Menu-item ${
                 option.value === renderOptions.currentRefinement
                   ? 'ais-Menu-item--selected'
                   : ''

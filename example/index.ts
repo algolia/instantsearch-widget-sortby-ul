@@ -6,7 +6,6 @@ import {
   hits,
   refinementList,
   pagination,
-  panel,
 } from 'instantsearch.js/es/widgets';
 
 const searchClient = algoliasearch(
@@ -18,18 +17,6 @@ const search = instantsearch({
   indexName: 'instant_search',
   searchClient,
 });
-
-const refinementListWithPanel = panel({
-  templates: {
-    header: 'Brand',
-  },
-})(refinementList);
-
-const sortByWithPanel = panel({
-  templates: {
-    header: 'Sort',
-  },
-})(sortBy);
 
 search.addWidgets([
   searchBox({
@@ -47,20 +34,23 @@ search.addWidgets([
 `,
     },
   }),
-  refinementListWithPanel({
+  refinementList({
     container: '#brand-list',
     attribute: 'brand',
   }),
   pagination({
     container: '#pagination',
   }),
-  sortByWithPanel({
+  sortBy({
     container: '#sort-by',
     items: [
       { value: 'instant_search', label: 'Most relevant' },
       { value: 'instant_search_price_asc', label: 'Lowest price' },
       { value: 'instant_search_price_desc', label: 'Highest price' },
     ],
+    cssClasses: {
+      root: 'ais-CustomSortBy',
+    },
   }),
 ]);
 
