@@ -1,6 +1,6 @@
 {
   "name": "@eunjae-lee/instantsearch-widget-sortby-ul",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "InstantSearch widget that makes a sort-by",
   "keywords": [
     "instantsearch-widget",
