@@ -1055,10 +1055,10 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@eunjae-lee/instantsearch-widget-sortby-ul@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@eunjae-lee/instantsearch-widget-sortby-ul/-/instantsearch-widget-sortby-ul-1.0.0.tgz#f12eaa70ee85f4817fe49ae03b1ce7be3d3f33f4"
-  integrity sha512-CgVq94XvCFmlZn/Pqx/nX18QxZ0JYba1whYlGEyIRhEkjxeKAEDb5GYUjclIpGaEBa3Y+cHS3qBedxrb93FqHA==
+"@eunjae-lee/instantsearch-widget-sortby-ul@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@eunjae-lee/instantsearch-widget-sortby-ul/-/instantsearch-widget-sortby-ul-1.1.0.tgz#54979a59219602c2b0e71f007b8300362ea5283b"
+  integrity sha512-+1GXvgDpBBKe7S9LKX66EJHqlMOZKgDt1FrTWfSfDkLx3et98H4ynOhRh41ot2fdTGl4rCvTh5QK0JEi0qIhow==
 
 "@iarna/toml@^2.2.0":
   version "2.2.5"
