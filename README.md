@@ -203,3 +203,12 @@ InstantSearch.js is a vanilla JavaScript library that lets you create an instant
 **InstantSearch.js** | [React InstantSearch][react-instantsearch-github] | [Vue InstantSearch][vue-instantsearch-github] | [Angular InstantSearch][instantsearch-angular-github] | [React InstantSearch Native][react-instantsearch-github] | [InstantSearch Android][instantsearch-android-github] | [InstantSearch iOS][instantsearch-ios-github]
 
 This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com).
+
+<!-- Links -->
+
+[algolia-website]: https://www.algolia.com/?utm_source=instantsearch.js-widget&utm_campaign=repository
+[react-instantsearch-github]: https://github.com/algolia/react-instantsearch/
+[vue-instantsearch-github]: https://github.com/algolia/vue-instantsearch
+[instantsearch-android-github]: https://github.com/algolia/instantsearch-android
+[instantsearch-ios-github]: https://github.com/algolia/instantsearch-ios
+[instantsearch-angular-github]: https://github.com/algolia/angular-instantsearch
