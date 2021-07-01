@@ -68,6 +68,8 @@ search.start();
 | :-- | :-- | :-- | :-- | --- |
 | [`container`](#container) | `string` or `HTMLElement` | true | - | The element to insert the widget into. |
 | [`items`](#items) | `object[]` | true | - | The list of indices to search in. |
+| [` cssClasses`](#cssclasses) | `object` | - | The CSS classes to override. |
+| [` transformItems`](#transformitems) | `function` | - | Receives the items, and is called before displaying them. |
 
 #### container
 
@@ -110,5 +112,50 @@ sortBy({
     { label: 'Price (desc)', value: 'instant_search_price_desc' },
   ],
   // ...
+});
+```
+
+#### cssClasses
+
+> `object` | **optional**
+
+The CSS classes to override.
+
+- `root`: the root element of the widget.
+- `ul`: the `<ul>` element.
+- `li`: each `<li>` element.
+
+```js
+sortBy({
+  // ...
+  cssClasses: {
+    root: 'MyCustomSortByUL',
+    ul: [
+      'MyCustomSortByUL',
+      'MyCustomSortByUL--subclass',
+    ],
+  },
+});
+```
+
+#### transformItems
+
+> `function` | **optional**
+
+Receives the items, and is called before displaying them. Should return a new array with the same shape as the original array. Useful for mapping over the items to transform, and remove or reorder them.
+
+- `root`: the root element of the widget.
+- `ul`: the `<ul>` element.
+- `li`: each `<li>` element.
+
+```js
+sortBy({
+  // ...
+  transformItems(items) {
+    return items.map(item => ({
+      ...item,
+      label: item.label.toUpperCase(),
+    }));
+  },
 });
 ```
