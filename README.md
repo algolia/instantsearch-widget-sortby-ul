@@ -122,18 +122,15 @@ sortBy({
 The CSS classes to override.
 
 - `root`: the root element of the widget.
-- `ul`: the `<ul>` element.
-- `li`: each `<li>` element.
+- `list`: the `<ul>` element.
+- `item`: each `<li>` element.
 
 ```js
 sortBy({
   // ...
   cssClasses: {
     root: 'MyCustomSortByUL',
-    ul: [
-      'MyCustomSortByUL',
-      'MyCustomSortByUL--subclass',
-    ],
+    list: 'MyCustomSortByUL MyCustomSortByUL--subclass',
   },
 });
 ```
@@ -143,10 +140,6 @@ sortBy({
 > `function` | **optional**
 
 Receives the items, and is called before displaying them. Should return a new array with the same shape as the original array. Useful for mapping over the items to transform, and remove or reorder them.
-
-- `root`: the root element of the widget.
-- `ul`: the `<ul>` element.
-- `li`: each `<li>` element.
 
 ```js
 sortBy({
