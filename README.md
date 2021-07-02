@@ -8,7 +8,7 @@
 
 ---
 
-[![MIT](https://img.shields.io/npm/l/@eunjae-lee/instantsearch-widget-sortby-ul)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@eunjae-lee/instantsearch-widget-sortby-ul.svg)](https://npmjs.org/package/@eunjae-lee/instantsearch-widget-sortby-ul)
+[![MIT](https://img.shields.io/npm/l/@algolia/instantsearch-widget-sortby-ul)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@algolia/instantsearch-widget-sortby-ul.svg)](https://npmjs.org/package/@algolia/instantsearch-widget-sortby-ul)
 
 ## Summary
 
@@ -24,14 +24,14 @@
 
 ## Demo
 
-[Demo](https://codesandbox.io/s/github/eunjae-lee/js-sort-by/tree/main/example?file=/index.ts) on CodeSandbox.
+[Demo](https://codesandbox.io/s/quizzical-lalande-fhjgw) on CodeSandbox.
 
 ## Install
 
 ```bash
-npm install @eunjae-lee/instantsearch-widget-sortby-ul
+npm install @algolia/instantsearch-widget-sortby-ul
 # or
-yarn add @eunjae-lee/instantsearch-widget-sortby-ul
+yarn add @algolia/instantsearch-widget-sortby-ul
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ yarn add @eunjae-lee/instantsearch-widget-sortby-ul
 ```js
 import instantsearch from 'instantsearch.js';
 import algoliasearch from 'algoliasearch/lite';
-import { sortBy } from '@eunjae-lee/instantsearch-widget-sortby-ul';
+import { sortBy } from '@algolia/instantsearch-widget-sortby-ul';
 
 const searchClient = algoliasearch('appId', 'apiKey');
 
@@ -169,10 +169,10 @@ Encountering an issue? Before reaching out to support, we recommend heading to o
 
 We welcome all contributors, from casual to regular 💙
 
-- **Bug report**. Is something not working as expected? [Send a bug report](https://github.com/eunjae-lee/js-sort-by/issues/new?template=Bug_report.md).
-- **Feature request**. Would you like to add something to the library? [Send a feature request](https://github.com/eunjae-lee/js-sort-by/issues/new?template=Feature_request.md).
-- **Documentation**. Did you find a typo in the doc? [Open an issue](https://github.com/eunjae-lee/js-sort-by/issues/new) and we'll take care of it.
-- **Development**. If you don't know where to start, you can check the open issues that are [tagged easy](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aopen+is%3Aissue+label%3A%22Difficulty%3A++++++%E2%9D%84%EF%B8%8F+easy%22), the [bugs](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9D%A4+Bug%22) or [chores](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9C%A8+Chore%22).
+- **Bug report**. Is something not working as expected? [Send a bug report](https://github.com/algolia/js-sort-by/issues/new?template=Bug_report.md).
+- **Feature request**. Would you like to add something to the library? [Send a feature request](https://github.com/algolia/js-sort-by/issues/new?template=Feature_request.md).
+- **Documentation**. Did you find a typo in the doc? [Open an issue](https://github.com/algolia/js-sort-by/issues/new) and we'll take care of it.
+- **Development**. If you don't know where to start, you can check the open issues that are [tagged easy](https://github.com/algolia/js-sort-by/issues?q=is%3Aopen+is%3Aissue+label%3A%22Difficulty%3A++++++%E2%9D%84%EF%B8%8F+easy%22), the [bugs](https://github.com/algolia/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9D%A4+Bug%22) or [chores](https://github.com/algolia/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9C%A8+Chore%22).
 
 To start contributing to code, you need to:
 

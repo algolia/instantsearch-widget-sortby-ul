@@ -1,4 +1,3 @@
-import { sortBy } from '@eunjae-lee/instantsearch-widget-sortby-ul';
 import algoliasearch from 'algoliasearch/lite';
 import instantsearch from 'instantsearch.js';
 import {
@@ -7,6 +6,8 @@ import {
   refinementList,
   pagination,
 } from 'instantsearch.js/es/widgets';
+
+import { sortBy } from '../src';
 
 const searchClient = algoliasearch(
   'latency',

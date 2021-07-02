@@ -1,5 +1,5 @@
 {
-  "name": "@eunjae-lee/instantsearch-widget-sortby-ul",
+  "name": "@algolia/instantsearch-widget-sortby-ul",
   "version": "1.1.0",
   "description": "InstantSearch widget that makes a sort-by",
   "keywords": [

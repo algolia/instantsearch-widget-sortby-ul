@@ -29,6 +29,6 @@ export const sortBy: SortByWidgetCreator = function SortBy(widgetParams) {
 
   return {
     ...createWidget(connectorParams),
-    $$widgetType: 'eunjae-lee.sortby-ul',
+    $$widgetType: 'algolia.sortby-ul',
   };
 };
