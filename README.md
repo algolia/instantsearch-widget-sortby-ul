@@ -16,9 +16,9 @@
 - [Installation](#install)
 - [Usage](#usage)
 - [Options](#options)
-- [Compatibility](#compatibility)
-- [About InstantSearch.js](#learn-more-about-instantsearchjs)
-- [Contributors & Licence](#contributors--licence)
+- [Browser Support](#browser-support)
+- [Troubleshooting](#Troubleshooting)
+- [Contributing & Licence](#contributing--licence)
 
 # Get started
 
@@ -68,6 +68,8 @@ search.start();
 | :-- | :-- | :-- | :-- | --- |
 | [`container`](#container) | `string` or `HTMLElement` | true | - | The element to insert the widget into. |
 | [`items`](#items) | `object[]` | true | - | The list of indices to search in. |
+| [` cssClasses`](#cssclasses) | `object` | false | {} | The CSS classes to override. |
+| [` transformItems`](#transformitems) | `function` | false | items => items | Receives the items, and is called before displaying them. |
 
 #### container
 
@@ -112,3 +114,94 @@ sortBy({
   // ...
 });
 ```
+
+#### cssClasses
+
+> `object` | **optional**
+
+The CSS classes to override.
+
+- `root`: the root element of the widget.
+- `list`: the `<ul>` element.
+- `item`: each `<li>` element.
+
+```js
+sortBy({
+  // ...
+  cssClasses: {
+    root: 'MyCustomSortByUL',
+    list: 'MyCustomSortByUL MyCustomSortByUL--subclass',
+  },
+});
+```
+
+#### transformItems
+
+> `function` | **optional**
+
+Receives the items, and is called before displaying them. Should return a new array with the same shape as the original array. Useful for mapping over the items to transform, and remove or reorder them.
+
+```js
+sortBy({
+  // ...
+  transformItems(items) {
+    return items.map(item => ({
+      ...item,
+      label: item.label.toUpperCase(),
+    }));
+  },
+});
+```
+
+## Browser support
+
+Same as InstantSearch.js it supports the **last two versions of major browsers** (Chrome, Edge, Firefox, Safari).
+
+Please refer to the [browser support](https://www.algolia.com/doc/guides/building-search-ui/installation/js/#browser-support) section in the documentation to use InstantSearch.js and this widget on other browsers.
+
+## Troubleshooting
+
+Encountering an issue? Before reaching out to support, we recommend heading to our [FAQ](https://www.algolia.com/doc/guides/building-search-ui/troubleshooting/faq/js/) where you will find answers for the most common issues and gotchas with the library.
+
+## Contributing & Licence
+
+### How to contribute
+
+We welcome all contributors, from casual to regular 💙
+
+- **Bug report**. Is something not working as expected? [Send a bug report](https://github.com/eunjae-lee/js-sort-by/issues/new?template=Bug_report.md).
+- **Feature request**. Would you like to add something to the library? [Send a feature request](https://github.com/eunjae-lee/js-sort-by/issues/new?template=Feature_request.md).
+- **Documentation**. Did you find a typo in the doc? [Open an issue](https://github.com/eunjae-lee/js-sort-by/issues/new) and we'll take care of it.
+- **Development**. If you don't know where to start, you can check the open issues that are [tagged easy](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aopen+is%3Aissue+label%3A%22Difficulty%3A++++++%E2%9D%84%EF%B8%8F+easy%22), the [bugs](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9D%A4+Bug%22) or [chores](https://github.com/eunjae-lee/js-sort-by/issues?q=is%3Aissue+is%3Aopen+label%3A%22%E2%9C%A8+Chore%22).
+
+To start contributing to code, you need to:
+
+1.  [Fork the project](https://help.github.com/articles/fork-a-repo/)
+1.  [Clone the repository](https://help.github.com/articles/cloning-a-repository/)
+1.  Install the dependencies: `yarn`
+1.  Run the development mode: `yarn start`
+1.  [Open the stories](http://localhost:3000)
+
+Please read [our contribution process](CONTRIBUTING.md) to learn more.
+
+### Licence
+Licensed under the MIT license.
+
+---
+
+**About InstantSearch.js**
+
+InstantSearch.js is a vanilla JavaScript library that lets you create an instant-search result experience using [Algolia][algolia-website]’s search API. It is part of the InstantSearch family:
+
+**InstantSearch.js** | [React InstantSearch][react-instantsearch-github] | [Vue InstantSearch][vue-instantsearch-github] | [Angular InstantSearch][instantsearch-angular-github] | [React InstantSearch Native][react-instantsearch-github] | [InstantSearch Android][instantsearch-android-github] | [InstantSearch iOS][instantsearch-ios-github]
+
+This project was generated with [create-instantsearch-app](https://github.com/algolia/create-instantsearch-app) by [Algolia](https://algolia.com).
+
+<!-- Links -->
+
+[algolia-website]: https://www.algolia.com/?utm_source=instantsearch.js-widget&utm_campaign=repository
+[react-instantsearch-github]: https://github.com/algolia/react-instantsearch/
+[vue-instantsearch-github]: https://github.com/algolia/vue-instantsearch
+[instantsearch-android-github]: https://github.com/algolia/instantsearch-android
+[instantsearch-ios-github]: https://github.com/algolia/instantsearch-ios
+[instantsearch-angular-github]: https://github.com/algolia/angular-instantsearch
