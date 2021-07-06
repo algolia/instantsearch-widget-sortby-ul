@@ -24,7 +24,7 @@
 
 ## Demo
 
-[Demo](https://codesandbox.io/s/quizzical-lalande-fhjgw) on CodeSandbox.
+[Demo](https://codesandbox.io/s/github/algolia/instantsearch-widget-sortby-ul?file=/example/index.ts) on CodeSandbox.
 
 ## Install
 
@@ -145,7 +145,7 @@ Receives the items, and is called before displaying them. Should return a new ar
 sortBy({
   // ...
   transformItems(items) {
-    return items.map(item => ({
+    return items.map((item) => ({
       ...item,
       label: item.label.toUpperCase(),
     }));
@@ -185,6 +185,7 @@ To start contributing to code, you need to:
 Please read [our contribution process](CONTRIBUTING.md) to learn more.
 
 ### Licence
+
 Licensed under the MIT license.
 
 ---

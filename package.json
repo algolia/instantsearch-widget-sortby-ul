@@ -22,7 +22,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "start": "parcel example/index.html",
+    "start": "parcel example/index.html --port 3000",
     "prebuild": "rm -rf dist",
     "build": "npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:types",
     "build:umd": "parcel build src/index.ts --global sortBy --out-dir dist/umd --out-file index.js --experimental-scope-hoisting",
