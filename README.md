@@ -1,9 +1,3 @@
-<p align="left">
-  <a href="https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/">
-    <img alt="InstantSearch.js" src="https://i.ibb.co/60fJjFy/Widget-banner-tmp.png">
-  </a>
-</p>
-
 [InstantSearch.js widget](https://www.algolia.com/?utm_source=instantsearch.js&utm_campaign=repository) displaying a list of indices, allowing a user to change the way hits are sorted. Equivalent of the offcial [sortby widget](https://www.algolia.com/doc/api-reference/widgets/sort-by/js/) using `<ul><li>` markups instead of `<select>`.
 
 ---
@@ -23,6 +17,8 @@
 # Get started
 
 ## Demo
+
+<p align="left"><img src="capture.gif" alt="A capture of the React InstantSearch SortByUL widget" /></p>
 
 [Demo](https://codesandbox.io/s/github/algolia/instantsearch-widget-sortby-ul?file=/example/index.ts) on CodeSandbox.
 
